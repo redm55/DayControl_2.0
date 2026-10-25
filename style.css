@@ -1,0 +1,127 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 29px;
+  /*font-family: "Comfortaa", sans-serif;*/
+  font-family: "Exo 2", sans-serif;
+}
+
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+  background: linear-gradient(-45deg, #05023a, #09082e, #0d0c2b, #0b0658); 
+  color: #ffffff;
+}
+
+
+.timer1{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  margin: 10px 10px;
+}
+
+
+.timer2{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  margin: 10px 10px;
+}
+
+
+.timer3{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  margin: 10px 10px;
+}
+
+
+.timer4{
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  margin: 10px 10px;
+}
+
+
+.countdown_timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.countdown_timer > div {
+  min-width: 65px;     
+  padding: 15px 10px; 
+  text-align: center;   
+  background: linear-gradient(45deg, #05083f, #0d148f); 
+  border: 2px solid #ffffff1f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.countdown_timer > div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5); 
+  cursor: pointer;
+}
+
+
+.countdown_timer h2 {
+  margin-bottom: 8px; 
+  margin-top: 0;     
+}
+
+
+.countdown_timer p {
+  margin: 0;          
+  color: #ffffff57;
+  transition: color 0.3s ease; 
+}
+
+
+.countdown_timer > div:hover p {
+  color: #ffffff; 
+}
+
+
+.sub-hint {
+  position: absolute;   /* Вырываем подсказку из разметки карточки */
+  left: 0;
+  right: 0;
+  bottom: 0;            /* Изначально прижимаем к самому низу внутри карточки */
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff8a;
+  
+  /* Эффект маскировки (прячем под текст) */
+  z-index: -1;          /* Уводим подсказку НА ЗАДНИЙ ПЛАН за карточку */
+  opacity: 0;           /* Делаем невидимой */
+  transition: all 0.3s ease;
+}
+
+
+.countdown_timer > div:hover .sub-hint {
+  opacity: 1;
+  /* Сдвигаем подсказку вниз за пределы карточки, пока сама карточка летит вверх */
+  transform: translateY(25px); 
+}
+
